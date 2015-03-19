@@ -7,13 +7,12 @@
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
     {% include footer.html %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script async type="text/javascript" src="{{ "/js/main.min.js" | prepend: site.baseurl }}"></script>
 
   </body>
 
