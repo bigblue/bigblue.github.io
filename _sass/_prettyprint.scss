@@ -1,0 +1,92 @@
+
+.prettyprint code{
+	display:inline-block;
+	padding:0;
+	margin:0;
+	color:#eee;
+	font:500 14px 'Source Code Pro', 'Arial', Serif;
+	line-height:28px;
+	background:transparent;
+	border:0;
+}
+
+pre.prettyprint{
+	background:#313339;
+	border:0;
+	padding:0;
+	color:#fff;
+	margin:40px 0;
+	font:500 14px 'Source Code Pro', 'Arial', Serif;
+	line-height:36px;
+	padding:25px 35px;
+	overflow-x:auto;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+pre.prettyprint {
+  color: #839496;
+  background-color: #002b36;
+}
+
+.prettyprint .pln {
+  color: inherit;
+}
+
+.prettyprint .str,
+.prettyprint .lit,
+.prettyprint .atv {
+  color: #2aa198;
+}
+
+.prettyprint .kwd {
+  color: #268bd2;
+}
+
+.prettyprint .com,
+.prettyprint .dec {
+  color: #586e75;
+  font-style: italic;
+}
+
+.prettyprint .typ {
+  color: #93A1A1;
+}
+
+.prettyprint .pun {
+  color: inherit;
+}
+
+.prettyprint .opn {
+  color: inherit;
+}
+
+.prettyprint .clo {
+  color: inherit;
+}
+
+.prettyprint .tag {
+  color: #268bd2;
+  font-weight: bold;
+}
+
+.prettyprint .atn {
+  color: inherit;
+}
+
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #75715e; }
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: decimal !important; color:#fff; width:40px;  }
+li.L1,li.L3,li.L5,li.L7,li.L9 { background:transparent;}
+
+@media print {
+        pre .str, code .str { color: #060; }
+        pre .kwd, code .kwd { color: #006; font-weight: bold; }
+        pre .com, code .com { color: #600; font-style: italic; }
+        pre .typ, code .typ { color: #404; font-weight: bold; }
+        pre .lit, code .lit { color: #044; }
+        pre .pun, code .pun { color: #440; }
+        pre .pln, code .pln { color: #000; }
+        pre .tag, code .tag { color: #006; font-weight: bold; }
+        pre .atn, code .atn { color: #404; }
+}

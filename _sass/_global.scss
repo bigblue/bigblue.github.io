@@ -1,0 +1,300 @@
+body, html {
+	height: 100%;
+	background: #fff;
+	font: 400 16px $body-font;
+	color: $body-color;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	font-weight: 600;
+	color: $link-color;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	@include transition(border 0.2s, color 0.2s ease-out);
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
+h1 a:hover, p a:hover {
+	border-bottom: 3px solid $header-border-color;
+}
+
+h1, h2, h3, h4 {
+	margin: 30px 0;
+	font: 700 34px $header-font;
+	line-height: 56px;
+	color: $header-color;
+
+	i {
+		margin-right: 15px;
+	}
+}
+
+h2 {
+	margin: 30px 0 20px;
+	font: 700 26px $header-font;
+}
+
+h3 {
+	margin: 20px 0 10px;
+	font: 600 22px $body-font;
+}
+
+h4 {
+	margin: 20px 0 10px;
+	font: 600 20px $body-font;
+}
+
+p {
+	margin: 30px 0;
+	line-height: 32px;
+	color: $p-color;
+	word-wrap: break-word;
+}
+
+strong, em {
+	font-weight: 600;
+}
+
+img {
+	margin: 30px 0;
+	width: auto;
+	max-width: 100%;
+	@include border-radius(4px, 4px);
+}
+
+hr {
+	width: 70%;
+	height: 3px;
+	margin: 30px auto;
+	border: 0;
+	background: $hr-color;
+}
+
+code {
+	padding: 2px 6px;
+	margin: 0 5px;
+	background: $code-background;
+	border: 1px solid $code-border;
+	@include border-radius(4px, 4px);
+}
+
+blockquote, q, cite {
+	margin: 30px 0 30px 4%;
+	border-left: 3px solid $quote-border;
+	padding: 5px 4%;
+	font: italic 700 18px $header-font;
+	line-height: 38px;
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+table {
+	clear: both;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th {
+	background: $th-background;
+	font-weight: 700;
+}
+
+td, th {
+	border: 1px solid $td-border;
+	padding: 0.5rem;
+	text-align: left;
+}
+
+input:not([type=submit]):not([type=file]) {
+	padding: 8px 15px;
+	background: #fff;
+	border: 2px solid #808080;
+	font: 600 15px $body-font;
+	@include border-radius(4px, 4px);
+	outline: 0;
+	@include transition(all 0.2s ease-out);
+}
+
+input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([type=file]):focus {
+	border: 2px solid $selection-background;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: $selection-background;
+	text-shadow: none;
+}
+
+::selection {
+	color: #fff;
+	background: $selection-background;
+	text-shadow: none;
+}
+
+.title a {
+  font-family: $header-font;
+	position: fixed;
+	top: 13px;
+	left: 13px;
+	z-index: 200;
+	display: block;
+	padding: 9px 12px 6px;
+	background: $title-background;
+	color: #fff;
+	@include transition(background 0.6s ease-out);
+
+	&:hover {
+		background: $title-hover;
+	}
+
+	span {
+		display: inline-block;
+		margin-left: 15px;
+
+		@media screen and (max-width: 1140px) {
+			display: none;
+		}
+
+		@media screen and (max-width: 595px) {
+			display: inline-block;
+		}
+	}
+
+	&:hover span {
+		display: inline-block;
+		width: auto;
+	}
+
+	@media screen and (max-width: 906px) {
+		position: absolute;
+		left: 5%;
+		top: 30px;
+		position: absolute;
+		margin-top: 30px;
+		display: inline-block;
+	}
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.notification {
+	margin-top: 50px;
+	padding: 20px 25px;
+	background: #1c78be;
+	@include border-radius(4px, 4px);
+
+	.ntitle {
+		color: #c4e2f8;
+		font: 700 18px $body-font;
+		padding-right: 20px;
+		border-right: 2px solid #3285c4;
+	}
+
+	.message {
+		color: #fff;
+		font: 700 18px $body-font;
+		padding-left: 20px;
+	}
+
+	a {
+		position: relative;
+		margin-top: -3px;
+		display: inline-block;
+		float: right;
+		padding: 4px 10px 3px;
+		color: #fff;
+		background: #0b4673;
+		@include border-radius(30px, 30px);
+		@include transition(opacity 0.2s);
+
+		i {
+			margin-top: 3px;
+		}
+
+		&:hover {
+			color: #fff;
+			opacity: 0.6;
+		}
+	}
+}
+
+footer {
+	padding: 25px 0;
+	text-align: center;
+	font: 400 13px $body-font;
+	line-height: 34px;
+	color: $footer-color;
+
+	span {
+		display: block;
+	}
+
+	a {
+		color: $footer-link;
+	}
+
+	.smallnav {
+		display: none;
+
+		@media screen and (max-width: 906px) {
+			display: block;
+		}
+	}
+}
+
+.smallprofile {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin: 0 6px 0 11px;
+	vertical-align: -4px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.outside {
+	position: relative;
+	width: 120%;
+	margin-left: -10%;
+
+	& > * {
+		margin: 0;
+	}
+}
+
+.graybar {
+	margin: 10px 0;
+	font-size: 16px;
+	font-weight: 600;
+	font-family: $body-font;
+	border-radius: 4px;
+	background: $graybar-background;
+	color: $graybar-color;
+	padding: 17px 20px 15px;
+	overflow: hidden;
+
+	i {
+		margin-right: 10px;
+	}
+}

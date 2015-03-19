@@ -2,6 +2,7 @@
 layout: post
 title:  "Setup a coreos cluster on EC2"
 tags: coreos ec2 docker
+category: coreos
 author: Michael Vigor
 ---
 

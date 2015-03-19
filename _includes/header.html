@@ -6,11 +6,7 @@
   <a id="top"></a>
   <div class="navwrap">
     <ul class="menu">
-      {% for page in site.pages %}
-        {% if page.title %}
-        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-        {% endif %}
-      {% endfor %}
+      <li><a href="{{ "about.html" | prepend: site.baseurl }}">About</a></li>
     </ul>
     <div class="toggle"><a href="#"><i class="fa fa-bars"></i></a></div>
   </div>
