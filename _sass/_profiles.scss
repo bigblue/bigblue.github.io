@@ -1,8 +1,8 @@
 .profile {
 	position: fixed;
 	width: 15%;
-	right: 5%;
-	top: 130px;
+	left: 1%;
+	top: 75px;
 	z-index: 400;
 	-webkit-backface-visibility: hidden;
 	@include transition(all 0.3s ease-in-out);
@@ -81,18 +81,19 @@
 
 	strong {
 		margin: 20px 0 10px;
-		font: 600 14px 'Open Sans', Serif;
+		font: 600 14px $body-font;
 		color: #3a3a3a;
 	}
 
 	p {
 		margin: 20px 0;
 		clear: both;
-		font: 400 15px 'Open Sans', Serif;
+		font: 400 14px $header-font;
 		line-height: 28px;
 		max-height: 136px;
 		text-overflow: ellipsis;
 		overflow: hidden;
+    color: $header-color;
 
 		a {
 			color: #3b7bbf;
@@ -108,7 +109,7 @@
 	}
 
 	.tweet {
-		font: 600 12px 'Open Sans', Serif;
+		font: 600 12px $body-font;
 		line-height: 24px;
 		margin: 20px 0;
 
@@ -128,7 +129,6 @@
 	}
 
 	@media screen and (max-height: 640px) {
-		display: none !important;
 	}
 }
 

@@ -81,6 +81,8 @@ code {
 	background: $code-background;
 	border: 1px solid $code-border;
 	@include border-radius(4px, 4px);
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.8em;
 }
 
 blockquote, q, cite {
