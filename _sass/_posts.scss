@@ -140,7 +140,11 @@
 
 	header {
 		position: relative;
-    font-family: $header-font;
+    font-family: $body-font;
+
+    .post-meta {
+      font-family: $header-font;
+    }
 
 		h1 {
 			margin: 30px 0;
