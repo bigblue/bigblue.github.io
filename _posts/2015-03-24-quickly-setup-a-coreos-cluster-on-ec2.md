@@ -9,7 +9,7 @@ author: Michael Vigor
 
 While learning about launching CoreOS clusters on EC2, I found the process, even while using the AWS command line client, was slower and more painful than I would have liked. This is especially true once you start deploying to multiple regions, as then all the commands to create security groups, upload key pairs and list instances have to be run once for each region.
 
-To ease the process I ended up writing this set of bash scripts, which automate the repeated commands across regions, and carry out the housekeeping tasks required before your instances are launched.
+To ease the process I ended up writing [this set of bash scripts](https://github.com/bigblue/coreos_on_ec2), which automate the repeated commands across regions, and carry out the housekeeping tasks required before your instances are launched.
 
 ## Why CoreOS?
 
