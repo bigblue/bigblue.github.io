@@ -15,6 +15,12 @@ To ease the process I ended up writing [this set of bash scripts](https://github
 
 With the recent popularity of docker and container based deployments several stripped down docker focused flavours of linux have emerged, the most mature of which is CoreOS. It uses 40% less RAM than a typical linux server, leaving more resources for your docker containers and has clustering and container orchestration built in. The CoreOS tagline is "Linux for Massive Server Deployments", but I think it is a good fit for smaller scale deployments as well and is worth looking into.
 
+## Quick Demo
+
+Here’s a brief screencast of the scripts in action, and then read on for more details.
+
+<div class="asciiplayer-container" rel="18024" style="width:527px;height:445px;"></div>
+
 ## Getting the scripts
 
 Clone the github repository: 
@@ -126,6 +132,23 @@ The output lists the regions, instance ids and public ip addresses of each machi
 #eu-west-1  i-56582ab1   54.73.37.175
 #us-east-1  i-68d47094   54.80.101.113
 #us-west-1  i-4b8d8c88   54.177.239.168
+```
+
+Then you can SSH into any of the instances with the key that was used when launching. You will also want to connect as the `core` user.
+
+```bash
+ssh -i ~/.ssh/CoreOSKey_rsa core@54.73.37.175
+```
+
+Then to check on the status of your cluster use the fleet tool (CoreOS’s built in cluster management tool) to list the machines in the cluster.
+
+```bash
+CoreOS stable (557.2.0)
+core@ip-10-246-97-190 ~ $ fleetctl list-machines
+MACHINE         IP              METADATA
+1fe71d0e…     54.196.11.212   -
+211dc8f3…     54.177.222.204  -
+71f96747…     79.125.42.50    -
 ```
 
 ## Terminating your cluster
