@@ -43,7 +43,7 @@ See the [AWS cli docs](https://github.com/aws/aws-cli) if you run into any probl
 
 The included `single_region_userdata.yml` file has the basic settings for each instance where the whole cluster will be in a single region. 
 
-```
+```yaml
 #cloud-config
 
 coreos:
@@ -82,7 +82,7 @@ With those two bits of housekeeping done the new instances will be launched. The
 
 For a multi-region cluster the userdata supplied to each instance will need to be slightly different, see the included `multi_region_userdata.yml`
 
-```
+```yaml
 #cloud-config
 
 coreos:
@@ -109,7 +109,7 @@ With launching to multiple regions the security groups and key pairs have to be 
 
 So to launch a 3 instance cluster in `eu-west-1`, `us-west-1`, and `us-east-1` you would run:
 
-```
+```bash
 ./launchInstances.sh --region "eu-west-1,us-west-1,us-east-1" \
                      --userdata "multi_region_userdata.yml"
 ```
